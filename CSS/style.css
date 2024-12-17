@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    /* background: url('/Images/background.jpg') no-repeat;
+    background-size: cover; */
+    background: linear-gradient(to bottom, #1d1dde7d 23%, #9e1773a8 95%);
+}
+
+.section {
+    min-height: 50vh;
+    padding-top: 30px;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.nav {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.nav .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav .logo span {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav .logo img {
+    height: 8vh;
+}
+
+.nav ul {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+}
+
+.nav .btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    width: 10%;
+    height: 7vh;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    top: 10px;
+}
+
+.switch .fa-sun {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+
+.switch .fa-moon {
+    position: absolute;
+    top: 13px;
+    right: 14px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #1333b4;
+    transition: 0.4s;
+    width: 80px;
+    height: 40px;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    left: 4px;
+    background-color: rgb(122, 99, 251);
+    transition: 0.4s;
+}
+
+input:checked+.slider:before {
+    transform: translateX(40px);
+}
+
+.slider.round {
+    border-radius: 100px;
+}
+
+.slider.round:before {
+    border-radius: 100px;
+}
+
+
+
+.burger {
+    display: none;
+}
+
+.page-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-1 .contents {
+    flex: 0 0 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-1 .cont {
+    width: 50%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-1 .contents h1 {
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.page-1 .contents p {
+    font-weight: 600;
+    font-size: large;
+    padding: 20px;
+}
+
+.icons {
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icone {
+    text-decoration: none;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone i {
+    color: #ff0000;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+    z-index: 2;
+}
+
+.contents .buy-token {
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: #9933ff;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .burger {
+        display: block;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav ul,
+    .btn {
+        display: none;
+    }
+
+    .page-1 .cont {
+        width: 100%;
+    }
+
+    .page-1 .contents h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-1 .contents p {
+        font-weight: 600;
+        font-size: medium;
+    }
+
+    .icons {
+        width: 80%;
+    }
+
+    .buy-token {
+        display: block;
+    }
+}
